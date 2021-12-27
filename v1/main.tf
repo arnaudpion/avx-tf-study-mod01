@@ -18,6 +18,9 @@ resource "aws_route_table" "rt_vpc1" {
     cidr_block                = "10.2.0.0/16"
     vpc_peering_connection_id = aws_vpc_peering_connection.vpc1_to_vpc2_peering.id
   }
+  tags = {
+    Name = "${lookup(aws_vpc.vpc1.tags, "Name")}-rt"
+  }
 }
 
 resource "aws_route_table" "rt_vpc2" {
@@ -25,6 +28,9 @@ resource "aws_route_table" "rt_vpc2" {
   route {
     cidr_block                = "10.1.0.0/16"
     vpc_peering_connection_id = aws_vpc_peering_connection.vpc1_to_vpc2_peering.id
+  }
+  tags = {
+    Name = "${lookup(aws_vpc.vpc2.tags, "Name")}-rt"
   }
 }
 
