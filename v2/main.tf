@@ -193,9 +193,6 @@ resource "aws_instance" "vpc1_subnet1_ec2" {
   tags = {
     Name = "vpc1-subnet1-vm"
   }
-  /*depends_on = [
-    aws_internet_gateway.vpc1_igw
-  ]*/
 }
 
 resource "aws_instance" "vpc1_subnet2_ec2" {
