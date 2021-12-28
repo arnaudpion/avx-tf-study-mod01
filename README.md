@@ -15,3 +15,7 @@ Some hints can be found here:
 * AWS Subnet resource: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet
 * AWS Route table resource: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table
 * AWS Route table association resource: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association
+
+Versions details :
+* v1: MVP
+* v2: add EC2 instances in each subnet. Subnets are public, to allow for external access to instances as well as the download of packages
