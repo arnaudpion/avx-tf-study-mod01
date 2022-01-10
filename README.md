@@ -19,4 +19,4 @@ Some hints can be found here:
 Versions details :
 * v1: MVP
 * v2: add EC2 instances in each subnet. Subnets are public, to allow for external access to instances as well as the download of packages
-* v3: allows to define the number of VPCs to be deployed. Route tables are incomplete (no routes to other VPCs through peerings)
+* v3: allows to define the number of VPCs to be deployed. Route tables are incomplete (no routes to other VPCs through peerings). Run terraform plan command with the '-target "aws_vpc.vpc"' and do a first apply before applying the whole configuration
